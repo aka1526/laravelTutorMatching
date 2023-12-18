@@ -285,7 +285,7 @@ $(document).on("click", '.approve-status', function(e) {
                         url: url,
                         data:{doc_no:doc_no,doc_status:doc_status,"_token": "{{ csrf_token() }}"},
                         success: function(data){
-                          //  console.log(data);
+                             console.log(data);
                             Swal.fire({
                                 title: data.msg,
                                 icon:  data.icon,
@@ -293,7 +293,7 @@ $(document).on("click", '.approve-status', function(e) {
                                 timer: 1500,
                             }).then(() => {
 
-                                   location.reload();
+                                 //  location.reload();
 
                                 });
                         }

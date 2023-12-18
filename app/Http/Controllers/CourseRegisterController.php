@@ -26,7 +26,7 @@ class CourseRegisterController extends Controller
         $this->middleware(function ($request, $next) {
 
             try {
-                if( Auth::check() || auth()->guard('tutor')->user()->id != nul ){
+                if( Auth::check() || auth()->guard('tutor')->user()->id != null ){
                     $this->userId = Auth::id() !=''?  Auth::id() : auth()->guard('tutor')->user()->id;
 
                     return $next($request);
