@@ -1,0 +1,30 @@
+
+.container-port {
+    margin: 10%;
+    margin-top: 15vh;
+}
+
+/* ---------------------------------- */
+
+#detailCourse{
+    background-color: whitesmoke;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+#item-1{
+    padding: 2px;
+}
+/* ปุ่มกลับ */
+/* #backbtn {
+    text-decoration: none;
+    color: whitesmoke;
+} */
+
+.col1 img {
+    width: 25rem;
+    height: 20rem;
+    margin: auto auto;
+    display: block;
+    border-radius: 10px;
+}

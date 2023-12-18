@@ -1,0 +1,39 @@
+#container {
+    max-width: 1000vw;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tutor-info {
+    display: flex;
+    align-items: center;
+}
+
+.tutor-image {
+    width: 200px;
+    height: 150px;
+    border-radius: 5px;
+    display: block;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.info-group {
+    flex-grow: 1;
+}
+
+.info-field {
+    margin-bottom: 15px;
+}
+
+.buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+

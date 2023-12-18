@@ -1,0 +1,17 @@
+/* account */
+.larger-dropdown {
+    width: 300px;
+    padding: 20px;
+
+}
+
+.dropdown-item {
+    transition: background-color 0.3s ease;
+
+}
+
+.dropdown-item:hover {
+    background-color: #646464;
+    color: #ececec;
+    
+}

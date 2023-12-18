@@ -1,0 +1,172 @@
+body {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-family: "Kanit", sans-serif;
+}
+
+/* -------------------------navbar------------------------- */
+.navbar {
+    padding: 5px;
+    background-color: #ffffff;
+    font-size: 16px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease,
+        opacity 0.3s ease;
+    opacity: 1;
+}
+
+#navlink1 a:hover {
+    color: #ff3232;
+}
+
+
+/* welcome tutorhome */
+header {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.3)
+        ),
+        url("/storage/img/10.png");
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-family: "Chewy";
+}
+
+.header-content {
+    margin-bottom: 200px;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.header-content h2 {
+    font-size: 15vmin;
+}
+.line {
+    width: 550px;
+    height: 4px;
+    background: #ff3232;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+.header-content h1 {
+    font-size: 7vmin;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-family: "Kanit", sans-serif;
+}
+.ctn {
+    padding: 8px 15px;
+    background: #ff3232;
+    border-radius: 30px;
+    color: whitesmoke;
+}
+
+/* ---------------------news content ----------------------*/
+
+.carousel-inner img {
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.carousel-item {
+    text-align: center;
+}
+
+.carousel-caption {
+    background-color: rgba(56, 56, 56, 0.5);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.carousel-caption h3 {
+    color: white;
+    font-size: 24px;
+    margin: 5px 0;
+}
+
+.carousel-caption p {
+    color: white;
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+hr {
+    color: #ff3232;
+}
+
+/* ---------------------courses------------------------- */
+
+.display-3 {
+    color: #ff3232;
+    font-family: "Chewy";
+}
+
+.courses {
+    background-color: #ffffff;
+    height: 200px;
+}
+
+.card {
+    border: none;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* ---------------ติวเตอร์------------------ */
+
+.tutor-card {
+    width: 300px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: rgba(238, 238, 238, 0.95);
+}
+
+.tutor-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85px;
+    width: 85px;  
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 107px;
+    
+}
+
+.tutor-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tutor-link {
+    text-decoration: none;
+    color: black;
+}
+
+/* -------------------------------------------------------------- */
+.footer {
+    background-color: #343a40;
+}
+
+hr {
+    border: 0;
+    height: 5px;
+    background-color: #ff0000;
+    margin: 20px 0;
+}
