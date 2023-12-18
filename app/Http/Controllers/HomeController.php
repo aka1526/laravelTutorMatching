@@ -14,7 +14,8 @@ use App\Models\Teaches;
 
 use App\Models\UserMatch;
 use Illuminate\Http\Request;
-
+use App\Models\CourseRegister;
+use Auth;
 class HomeController extends Controller
 {
     /**
@@ -97,12 +98,14 @@ class HomeController extends Controller
 
     public function tutorHome()
     {
+        $this->updateExp();
         return view('tutorHome');
     }
 
 
     public function homereturn()
     {
+        $this->updateExp();
         $userId = auth()->user()->id;
         return redirect()->route('home', compact('userId'));
     }
@@ -115,9 +118,22 @@ class HomeController extends Controller
         return redirect()->route('nouserhome');
     }
 
+    public function updateExp(){
+        //dd('update EXP');
+        $today = Carbon::now()->format('Y-m-d');
+        CourseRegister::whereRaw(" (CURRENT_DATE()- date_start) >= course_total_day")
+            ->where('course_total_day','>',0)
+            ->where('approve_status','Y')
+            ->update(['approve_status' => 'EXP']);
+            return true;
+    }
 
     public function index($userId)
     {
+
+        $this->updateExp();
+
+
         $news = news::all();
         $courses = Course::inRandomOrder()->limit(8)->get();
         $tutors = Tutor::all();

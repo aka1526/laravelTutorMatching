@@ -85,6 +85,7 @@ class CourseRegisterController extends Controller
         $course_name    = $Course->course_name;
         $course_price   = $Course->course_price;
         $course_hour   = $Course->course_time;
+        $course_total_day   = $Course->course_total_day;
         $tutor_name    =$Tutor->tutor_name;
         $payment_datetime   =Carbon::now()->format("Y-m-d H:i");
         $register_status="N";
@@ -105,6 +106,7 @@ class CourseRegisterController extends Controller
             , 'tutor_name'=>$tutor_name
             , 'course_price'=>$course_price
             , 'course_hour'=>$course_hour
+            , 'course_total_day'=>$course_total_day
             , 'payment_img'=>$payment_img
             , 'register_status'=>$register_status
             , 'payment_datetime'=>$payment_datetime

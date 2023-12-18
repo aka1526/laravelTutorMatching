@@ -8,6 +8,7 @@ use App\Models\Tutor;
 use App\Models\news;
 use App\Models\Course;
 use App\Models\Comment;
+use App\Models\CourseRegister;
 use DB;
 
 class TutorController extends Controller
@@ -21,7 +22,9 @@ class TutorController extends Controller
         $news = news::all();
         $courses = Course::inRandomOrder()->limit(8)->get();
         $tutors = Tutor::inRandomOrder()->limit(8)->get();
-
+        $home =new HomeController();
+        $home->updateExp();
+       // dd('dfg');
         return view('layouts.nouserhome', compact('news', 'courses', 'tutors'));
     }
 
