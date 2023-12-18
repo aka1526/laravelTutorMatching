@@ -118,7 +118,7 @@
                         <th scope="col">ชื่อผู้สมัคร</th>
                         <th scope="col">ชื่อคอร์ส</th>
                         <th scope="col">ราคา</th>
-                        <th scope="col">วันที่ต้องการเรียน</th>
+                        <th scope="col">วันที่เรียน</th>
 
                         <th scope="col">เอกสารการโอน</th>
                         <th scope="col" style="width: 180px;">สถานะอนุมัติ</th>
