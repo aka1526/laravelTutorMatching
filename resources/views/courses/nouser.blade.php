@@ -171,7 +171,7 @@
                                         class="card-img-top" alt="Course Image">
                                     <div class="card-body d-flex flex-column">
                                         <h5 class="card-title">{{ $course->course_name }} </h5>
-                                        <h5 class="card-title">{{ 'สอนโดย '.$tutors[$teaches[$course->id ]]  }}</h5>
+                                        <h5 class="card-title">สอนโดย {{ isset($teachex[$course->id]) && isset($tutorx[$teachex[$course->id]]) ? $tutorx[$teachex[$course->id]] : '-' }}</h5>
 
                                         <p class="card-text">{{ $course->course_level }}</p>
                                         <div class="button-container">
