@@ -142,6 +142,8 @@
                             <button type="button" class="btn btn-warning " style="width: 100%">รออนุมัติ</button>
                         @elseif($item->approve_status=="Y")
                             <button type="button" class="btn btn-success" style="width: 100%">อนุมัติเรียบร้อย</button>
+                        @elseif($item->approve_status=="EXP")
+                        <button type="button" class="btn btn-secondary" style="width: 100%">หมดเวลา</button>
                         @else
                             <button type="button" class="btn btn-danger" style="width: 100%">คืนเงิน</button>
                         @endif

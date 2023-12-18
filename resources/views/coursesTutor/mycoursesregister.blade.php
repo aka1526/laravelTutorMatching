@@ -206,7 +206,11 @@
                                         อนุมัติเรียบร้อย
                                     </button>
                                     <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-                                    @else
+                                        @elseif($item->approve_status=="EXP")
+                                        <button type="button" class="btn btn-secondary">
+                                            หมดเวลา
+                                        </button>
+                                        @else
                                     <button type="button" class="btn btn-danger">
                                         คืนเงิน
                                     </button>
@@ -218,8 +222,14 @@
                                 </button>
                                 <ul class="dropdown-menu">
                                     @if($item->approve_status=="W")
+
+
+
+
                                     <li><a class="dropdown-item approve-status" data-doc_no="{{ $item->doc_no }}" data-doc_status="Y" href="javascript:void(0)">อนุมัติ</a></li>
                                     <li><a class="dropdown-item approve-status" data-doc_no="{{ $item->doc_no }}" data-doc_status="N" href="javascript:void(0)">คืนเงิน</a></li>
+
+
                                     @elseif($item->approve_status=="Y")
                                     <li><a class="dropdown-item approve-status" data-doc_no="{{ $item->doc_no }}" data-doc_status="N" href="javascript:void(0)">คืนเงิน</a></li>
                                     <li><a class="dropdown-item approve-status" data-doc_no="{{ $item->doc_no }}" data-doc_status="W" href="javascript:void(0)">ล้างใหม่</a></li>
