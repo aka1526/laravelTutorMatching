@@ -10,7 +10,6 @@ use App\Models\Subject;
 use App\Models\Comment;
 
 use App\Models\CourseRegister;
-
 use DB;
 use Auth;
 use Carbon\Carbon;
@@ -25,11 +24,15 @@ class CourseRegisterController extends Controller
     protected $line_api="https://notify-api.line.me/api/notify";
     public function __construct(){
         $this->middleware(function ($request, $next) {
-            if(Auth::id() ||  auth()->guard('tutor')->user()->id){
-                $this->userId = Auth::id() !=''?  Auth::id() : auth()->guard('tutor')->user()->id;
 
-                return $next($request);
-            } else {
+            try {
+                if( Auth::check() || auth()->guard('tutor')->user()->id != nul ){
+                    $this->userId = Auth::id() !=''?  Auth::id() : auth()->guard('tutor')->user()->id;
+
+                    return $next($request);
+                }
+     //code...
+            } catch (\Throwable $th) {
                 return redirect('/login');
             }
 
